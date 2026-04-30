@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Match Presidencial Colombia 2026</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="landing-page">
+
+  <!-- Tricolor top/bottom strips -->
+  <div class="tricolor-stripes"></div>
+
+  <!-- Grid background -->
+  <div class="bg-grid"></div>
+
+  <!-- Gradient background -->
+  <div class="bg-layer"></div>
+
+  <!-- Patriotic floating icons -->
+  <div class="patriotic-bg" id="patrioticBg">
+    <!-- SVG íconos patrióticos de Colombia: cóndor, flores, escudo, mapa, etc. -->
+    <!-- Generados por JS -->
+  </div>
+
+  <!-- Particles tricolor -->
+  <div id="particles"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <span class="header-flag">🇨🇴</span>
+    <span class="header-title">ELECCIONES 2026</span>
+    <span class="header-divider">|</span>
+    <span class="header-sub">Match Presidencial</span>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">🇨🇴 Colombia · Elecciones Mayo 2026</p>
+      <h1 class="hero-title">
+        <span class="line1">¿Con quién</span>
+        <span class="line2">votas<em>?</em></span>
+      </h1>
+      <p class="hero-desc">
+        Responde 15 preguntas sobre los temas que más importan a Colombia.<br/>
+        Descubre tu ideología política y con qué candidato presidencial compartes tu visión.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n amarillo">15</span>
+          <span class="stat-l">Preguntas</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-n azul">14</span>
+          <span class="stat-l">Candidatos</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-n rojo">3</span>
+          <span class="stat-l">Espectros</span>
+        </div>
+      </div>
+      <a href="quiz.html" class="cta-btn">
+        <span class="cta-text">Iniciar Cuestionario</span>
+        <span class="cta-arrow">→</span>
+      </a>
+      <p class="hero-note">✓ Anónimo &nbsp;&nbsp;✓ Gratuito &nbsp;&nbsp;✓ Sin registro</p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="globe-ring ring1"></div>
+      <div class="globe-ring ring2"></div>
+      <div class="globe-ring ring3"></div>
+      <div class="center-emblem">
+        <svg viewBox="0 0 160 190" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="emblFill" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"   stop-color="#FCD116" stop-opacity="0.25"/>
+              <stop offset="50%"  stop-color="#003893" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#CE1126" stop-opacity="0.25"/>
+            </linearGradient>
+            <filter id="emblGlow">
+              <feGaussianBlur stdDeviation="2.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- Mapa real Colombia escalado -->
+          <path d="M 93.2,14.0 L 89.0,15.9 L 87.5,19.6 L 78.1,24.5 L 68.1,25.1 L 67.2,27.0 L 60.9,27.6 L 54.2,32.5 L 52.2,36.9 L 53.5,38.1 L 52.2,41.2 L 53.5,42.4 L 53.1,43.7 L 48.0,44.9 L 45.9,48.6 L 42.4,51.1 L 34.5,51.7 L 33.9,53.5 L 36.7,58.5 L 35.0,60.4 L 31.1,61.0 L 29.8,65.9 L 31.9,67.8 L 31.7,69.6 L 35.2,72.1 L 33.9,75.8 L 36.3,80.1 L 33.0,82.6 L 34.8,83.2 L 35.6,90.6 L 35.2,93.1 L 33.2,94.9 L 35.0,98.0 L 37.2,99.2 L 36.9,100.5 L 31.7,106.7 L 26.5,107.3 L 31.5,107.9 L 29.5,109.8 L 24.7,110.4 L 21.2,114.7 L 22.5,117.8 L 19.7,118.4 L 18.0,120.3 L 24.7,125.8 L 34.1,130.2 L 35.0,132.6 L 49.8,134.5 L 61.8,138.8 L 65.1,141.3 L 66.8,145.6 L 73.5,148.7 L 74.9,151.2 L 74.4,152.4 L 78.1,154.2 L 78.3,158.6 L 80.5,159.8 L 106.0,160.4 L 108.4,161.7 L 109.7,163.5 L 103.4,172.8 L 108.6,174.6 L 111.0,177.1 L 117.1,147.4 L 114.5,140.7 L 110.4,137.6 L 110.6,130.8 L 120.0,129.5 L 118.2,125.8 L 112.6,125.2 L 142.6,124.6 L 143.1,122.7 L 140.0,112.8 L 133.7,107.9 L 138.9,103.0 L 135.5,99.2 L 133.0,91.8 L 133.3,84.4 L 135.5,82.6 L 135.5,80.1 L 137.6,77.6 L 137.4,75.8 L 134.6,74.5 L 114.8,73.9 L 110.2,68.4 L 105.4,67.1 L 89.3,66.5 L 88.4,64.0 L 85.5,62.8 L 85.8,59.1 L 87.1,57.3 L 86.6,54.8 L 83.6,51.7 L 82.1,46.8 L 77.3,44.9 L 80.3,40.6 L 81.4,33.8 L 85.3,27.6 L 87.7,27.0 L 90.3,22.7 L 96.2,20.8 L 99.5,18.3 L 98.4,15.2 L 95.4,14.0 Z"
+            fill="url(#emblFill)"
+            filter="url(#emblGlow)"
+            opacity="0.95"/>
+          <path d="M 93.2,14.0 L 89.0,15.9 L 87.5,19.6 L 78.1,24.5 L 68.1,25.1 L 67.2,27.0 L 60.9,27.6 L 54.2,32.5 L 52.2,36.9 L 53.5,38.1 L 52.2,41.2 L 53.5,42.4 L 53.1,43.7 L 48.0,44.9 L 45.9,48.6 L 42.4,51.1 L 34.5,51.7 L 33.9,53.5 L 36.7,58.5 L 35.0,60.4 L 31.1,61.0 L 29.8,65.9 L 31.9,67.8 L 31.7,69.6 L 35.2,72.1 L 33.9,75.8 L 36.3,80.1 L 33.0,82.6 L 34.8,83.2 L 35.6,90.6 L 35.2,93.1 L 33.2,94.9 L 35.0,98.0 L 37.2,99.2 L 36.9,100.5 L 31.7,106.7 L 26.5,107.3 L 31.5,107.9 L 29.5,109.8 L 24.7,110.4 L 21.2,114.7 L 22.5,117.8 L 19.7,118.4 L 18.0,120.3 L 24.7,125.8 L 34.1,130.2 L 35.0,132.6 L 49.8,134.5 L 61.8,138.8 L 65.1,141.3 L 66.8,145.6 L 73.5,148.7 L 74.9,151.2 L 74.4,152.4 L 78.1,154.2 L 78.3,158.6 L 80.5,159.8 L 106.0,160.4 L 108.4,161.7 L 109.7,163.5 L 103.4,172.8 L 108.6,174.6 L 111.0,177.1 L 117.1,147.4 L 114.5,140.7 L 110.4,137.6 L 110.6,130.8 L 120.0,129.5 L 118.2,125.8 L 112.6,125.2 L 142.6,124.6 L 143.1,122.7 L 140.0,112.8 L 133.7,107.9 L 138.9,103.0 L 135.5,99.2 L 133.0,91.8 L 133.3,84.4 L 135.5,82.6 L 135.5,80.1 L 137.6,77.6 L 137.4,75.8 L 134.6,74.5 L 114.8,73.9 L 110.2,68.4 L 105.4,67.1 L 89.3,66.5 L 88.4,64.0 L 85.5,62.8 L 85.8,59.1 L 87.1,57.3 L 86.6,54.8 L 83.6,51.7 L 82.1,46.8 L 77.3,44.9 L 80.3,40.6 L 81.4,33.8 L 85.3,27.6 L 87.7,27.0 L 90.3,22.7 L 96.2,20.8 L 99.5,18.3 L 98.4,15.2 L 95.4,14.0 Z"
+            fill="none"
+            stroke="rgba(252,209,22,0.7)"
+            stroke-width="1.5"
+            stroke-linejoin="round"/>
+          <!-- Cruz cartesiana -->
+          <line x1="80" y1="12" x2="80" y2="178" stroke="rgba(252,209,22,0.35)" stroke-width="0.8" stroke-dasharray="3,3"/>
+          <line x1="12" y1="97" x2="148" y2="97" stroke="rgba(252,209,22,0.35)" stroke-width="0.8" stroke-dasharray="3,3"/>
+          <circle cx="80" cy="97" r="3.5" fill="rgba(252,209,22,0.7)"/>
+          <text x="80" y="9"   fill="rgba(255,90,90,0.65)"  font-size="6.5" font-family="IBM Plex Mono" text-anchor="middle">IZQ</text>
+          <text x="150" y="100" fill="rgba(74,140,255,0.65)" font-size="6.5" font-family="IBM Plex Mono" text-anchor="start">DER</text>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <!-- Contador candidatos -->
+  <div class="candidates-counter">
+    <div class="counter-text">
+      <span>🗳️ &nbsp;Candidatos oficiales registrados:</span>
+      <strong>14</strong>
+      <span style="color:rgba(252,209,22,0.4)">|</span>
+      <span>Registraduría Nacional del Estado Civil</span>
+    </div>
+  </div>
+
+  <!-- Cómo funciona -->
+  <section class="how-section">
+    <h2 class="section-title">¿Cómo funciona?</h2>
+    <div class="steps">
+      <div class="step" data-animate>
+        <span class="step-num">01</span>
+        <h3>Responde</h3>
+        <p>15 preguntas sobre economía, seguridad, paz, educación y más temas clave para Colombia.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step" data-animate>
+        <span class="step-num">02</span>
+        <h3>Ubícate</h3>
+        <p>Visualiza tu posición ideológica en el mapa político con Colombia como fondo.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step" data-animate>
+        <span class="step-num">03</span>
+        <h3>Tu Match</h3>
+        <p>Compara tu perfil con los 14 candidatos presidenciales y descarga su plan de gobierno.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Match Presidencial Colombia 2026 · Herramienta educativa no partisan · <span>by MIGUEL CABRERA</span></p>
+  </footer>
+
+  <script>
+  // ==========================================
+  // ÍCONOS PATRIÓTICOS ANIMADOS
+  // ==========================================
+  const PATRIA_ICONS = [
+    // Cóndor (SVG inline)
+    { type: 'svg', content: `<svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30,10 C25,8 10,15 5,25 C10,22 18,20 22,24 L15,35 L22,30 L20,42 L28,34 L30,38 L32,34 L40,42 L38,30 L45,35 L38,24 C42,20 50,22 55,25 C50,15 35,8 30,10Z" fill="none" stroke="rgba(252,209,22,VAR)" stroke-width="1.5"/>
+      <circle cx="30" cy="12" r="3" fill="none" stroke="rgba(252,209,22,VAR)" stroke-width="1"/>
+    </svg>`, op: 0.25, color: '#FCD116' },
+
+    // Escudo tricolor (simplificado)
+    { type: 'svg', content: `<svg viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20,2 L38,10 L38,28 C38,38 20,48 20,48 C20,48 2,38 2,28 L2,10 Z" fill="none" stroke="rgba(206,17,38,VAR)" stroke-width="1.5"/>
+      <line x1="2" y1="22" x2="38" y2="22" stroke="rgba(0,56,147,VAR)" stroke-width="0.8"/>
+      <line x1="2" y1="32" x2="38" y2="32" stroke="rgba(0,56,147,VAR)" stroke-width="0.8"/>
+    </svg>`, op: 0.2, color: '#CE1126' },
+
+    // Mapa Colombia
+    { type: 'svg', content: `<svg viewBox="0 0 50 60" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25,3 L32,6 L38,4 L41,10 L44,8 L45,16 L40,22 L43,30 L40,38 L44,44 L40,50 L34,54 L28,57 L24,60 L20,57 L16,52 L12,46 L10,38 L14,32 L10,26 L13,20 L18,15 L12,10 L16,6 Z" fill="none" stroke="rgba(252,209,22,VAR)" stroke-width="1.2"/>
+    </svg>`, op: 0.2, color: '#FCD116' },
+
+    // Estrella de 6 puntas (como en decoraciones patrias)
+    { type: 'svg', content: `<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="20,2 24,14 36,14 26,22 30,34 20,26 10,34 14,22 4,14 16,14" fill="none" stroke="rgba(252,209,22,VAR)" stroke-width="1.3"/>
+    </svg>`, op: 0.2, color: '#FCD116' },
+
+    // Cruz de laurel (decorativo)
+    { type: 'svg', content: `<svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="22" cy="22" r="18" fill="none" stroke="rgba(0,56,147,VAR)" stroke-width="1" stroke-dasharray="4,3"/>
+      <circle cx="22" cy="22" r="10" fill="none" stroke="rgba(252,209,22,VAR)" stroke-width="0.8"/>
+      <line x1="22" y1="4" x2="22" y2="40" stroke="rgba(206,17,38,VAR)" stroke-width="0.6" stroke-dasharray="2,3"/>
+      <line x1="4" y1="22" x2="40" y2="22" stroke="rgba(206,17,38,VAR)" stroke-width="0.6" stroke-dasharray="2,3"/>
+    </svg>`, op: 0.18, color: '#003893' },
+
+    // Lemniscata / infinito (símbolo de paz)
+    { type: 'text', content: '∞', op: 0.2, color: '#FCD116' },
+    // Paloma
+    { type: 'text', content: '🕊', op: 0.15, color: '#fff' },
+    // Bandera
+    { type: 'text', content: '🇨🇴', op: 0.2, color: '#fff' },
+    // Orchidea (flor nacional)
+    { type: 'text', content: '🌸', op: 0.15, color: '#fff' },
+    // Águila cóndor
+    { type: 'text', content: '🦅', op: 0.15, color: '#fff' },
+    // Pico
+    { type: 'text', content: '⛰', op: 0.12, color: '#fff' },
+    // Estrella
+    { type: 'text', content: '★', op: 0.18, color: '#FCD116' },
+  ];
+
+  function createPatrioticBg() {
+    const container = document.getElementById('patrioticBg');
+    const count = 28;
+    for (let i = 0; i < count; i++) {
+      const icon = PATRIA_ICONS[i % PATRIA_ICONS.length];
+      const el = document.createElement('div');
+      el.className = 'patria-icon';
+
+      const x = Math.random() * 96 + '%';
+      const y = Math.random() * 96 + '%';
+      const sz = (Math.random() * 28 + 20) + 'px';
+      const dur = (Math.random() * 10 + 8) + 's';
+      const delay = (Math.random() * 12) + 's';
+      const rot0 = (Math.random() * 20 - 10) + 'deg';
+      const rot1 = (Math.random() * 20 - 10) + 'deg';
+
+      el.style.cssText = `
+        left:${x}; top:${y};
+        --sz:${sz}; --dur:${dur}; --delay:${delay};
+        --rot0:${rot0}; --rot1:${rot1};
+        --op:${icon.op};
+        --glow: ${icon.color}44;
+        font-size:${sz};
+        width:${sz}; height:${sz};
+      `;
+
+      if (icon.type === 'text') {
+        el.textContent = icon.content;
+        el.style.display = 'flex';
+        el.style.alignItems = 'center';
+        el.style.justifyContent = 'center';
+      } else {
+        // SVG - sustituir VAR por la opacidad deseada
+        el.innerHTML = icon.content.replace(/VAR/g, icon.op.toString());
+        el.style.width = sz; el.style.height = sz;
+      }
+      container.appendChild(el);
+    }
+  }
+
+  // Partículas tricolor
+  function createParticles() {
+    const container = document.getElementById('particles');
+    container.style.cssText = 'position:fixed;inset:0;z-index:0;pointer-events:none;';
+    const colors = ['p-amarillo', 'p-azul', 'p-rojo'];
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle ' + colors[i % 3];
+      const s = (Math.random() * 4 + 2) + 'px';
+      p.style.setProperty('--x', Math.random() * 100 + '%');
+      p.style.setProperty('--y', Math.random() * 100 + '%');
+      p.style.setProperty('--s', s);
+      p.style.setProperty('--d', (Math.random() * 8 + 5) + 's');
+      p.style.setProperty('--dl', (Math.random() * 10) + 's');
+      p.style.width = s; p.style.height = s;
+      container.appendChild(p);
+    }
+  }
+
+  // Intersection observer para steps
+  function initStepsAnimation() {
+    const steps = document.querySelectorAll('[data-animate]');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => {
+            e.target.classList.add('visible');
+            e.target.style.animation = `fadeUp 0.6s ease both`;
+          }, i * 120);
+        }
+      });
+    }, { threshold: 0.15 });
+    steps.forEach(s => obs.observe(s));
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    createPatrioticBg();
+    createParticles();
+    initStepsAnimation();
+  });
+  </script>
+</body>
+</html>

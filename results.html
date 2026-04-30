@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultado · Match Presidencial Colombia 2026</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="results-page">
+
+  <div class="tricolor-stripes"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-layer subtle"></div>
+
+  <header class="quiz-header">
+    <a href="index.html" class="back-link">← Inicio</a>
+    <span class="quiz-brand">🇨🇴 Match Presidencial 2026</span>
+    <button class="btn-share-header" onclick="downloadResult()">⬇ Descargar resultado</button>
+  </header>
+
+  <main class="results-main">
+
+    <!-- TARJETA DE IDEOLOGÍA (descargable) -->
+    <section class="result-ideology" id="resultCard">
+      <div class="result-badge" id="resultBadge">CENTRO</div>
+      <h2 class="result-label" id="resultLabel">Calculando...</h2>
+      <p class="result-desc" id="resultDesc"></p>
+
+      <!-- MAPA COLOMBIA + PLANO CARTESIANO -->
+      <div class="map-container" id="mapContainer">
+        <svg id="ideologyMap" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="colMap" cx="50%" cy="50%" r="60%">
+              <stop offset="0%"   stop-color="rgba(252,209,22,0.07)"/>
+              <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+            </radialGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="softGlow">
+              <feGaussianBlur stdDeviation="2" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="mapGlow">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="mapFillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"   stop-color="#FCD116" stop-opacity="0.07"/>
+              <stop offset="45%"  stop-color="#003893" stop-opacity="0.05"/>
+              <stop offset="100%" stop-color="#CE1126" stop-opacity="0.06"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Fondo general -->
+          <rect width="500" height="600" fill="url(#colMap)"/>
+
+          <!-- MAPA REAL DE COLOMBIA (trazado desde silueta oficial) -->
+          <!-- Relleno con brillo -->
+          <path
+            d="M 295.2,32.0 L 280.3,38.1 L 274.8,50.1 L 241.0,66.2 L 204.8,68.2 L 201.6,74.3 L 178.8,76.3 L 154.5,92.4 L 147.4,106.5 L 152.1,110.5 L 147.4,120.6 L 152.1,124.6 L 150.5,128.6 L 132.4,132.6 L 124.6,144.7 L 112.0,152.8 L 83.7,154.8 L 81.3,160.8 L 91.6,176.9 L 85.3,183.0 L 71.1,185.0 L 66.4,201.1 L 74.3,207.1 L 73.5,213.1 L 86.1,221.2 L 81.3,233.3 L 90.0,247.4 L 78.2,255.4 L 84.5,257.4 L 87.6,281.6 L 86.1,289.6 L 79.0,295.7 L 85.3,305.7 L 93.1,309.7 L 92.3,313.8 L 73.5,333.9 L 54.6,335.9 L 72.7,337.9 L 65.6,344.0 L 48.3,346.0 L 35.7,360.0 L 40.4,370.1 L 30.2,372.1 L 23.9,378.2 L 48.3,396.3 L 82.1,410.4 L 85.3,418.4 L 138.7,424.4 L 182.0,438.5 L 193.8,446.6 L 200.1,460.7 L 224.4,470.7 L 229.2,478.8 L 227.6,482.8 L 241.0,488.8 L 241.7,502.9 L 249.6,507.0 L 341.6,509.0 L 350.3,513.0 L 355.0,519.0 L 332.2,549.2 L 351.0,555.3 L 359.7,563.3 L 381.7,466.7 L 372.3,444.6 L 357.3,434.5 L 358.1,412.4 L 391.9,408.3 L 385.6,396.3 L 365.2,394.3 L 473.7,392.2 L 475.3,386.2 L 464.3,354.0 L 441.5,337.9 L 460.3,321.8 L 447.8,309.7 L 439.1,285.6 L 439.9,261.4 L 447.8,255.4 L 447.8,247.4 L 455.6,239.3 L 454.8,233.3 L 444.6,229.2 L 373.1,227.2 L 356.5,209.1 L 339.2,205.1 L 281.1,203.1 L 277.9,195.0 L 267.7,191.0 L 268.5,178.9 L 273.2,172.9 L 271.6,164.8 L 260.6,154.8 L 255.1,138.7 L 237.8,132.6 L 248.8,118.6 L 252.8,96.4 L 266.9,76.3 L 275.6,74.3 L 285.0,60.2 L 306.2,54.2 L 318.0,46.1 L 314.1,36.0 L 303.1,32.0 Z"
+            fill="url(#mapFillGrad)"
+            filter="url(#mapGlow)"
+            opacity="0.9"/>
+          <!-- Borde con efecto tricolor -->
+          <path
+            d="M 295.2,32.0 L 280.3,38.1 L 274.8,50.1 L 241.0,66.2 L 204.8,68.2 L 201.6,74.3 L 178.8,76.3 L 154.5,92.4 L 147.4,106.5 L 152.1,110.5 L 147.4,120.6 L 152.1,124.6 L 150.5,128.6 L 132.4,132.6 L 124.6,144.7 L 112.0,152.8 L 83.7,154.8 L 81.3,160.8 L 91.6,176.9 L 85.3,183.0 L 71.1,185.0 L 66.4,201.1 L 74.3,207.1 L 73.5,213.1 L 86.1,221.2 L 81.3,233.3 L 90.0,247.4 L 78.2,255.4 L 84.5,257.4 L 87.6,281.6 L 86.1,289.6 L 79.0,295.7 L 85.3,305.7 L 93.1,309.7 L 92.3,313.8 L 73.5,333.9 L 54.6,335.9 L 72.7,337.9 L 65.6,344.0 L 48.3,346.0 L 35.7,360.0 L 40.4,370.1 L 30.2,372.1 L 23.9,378.2 L 48.3,396.3 L 82.1,410.4 L 85.3,418.4 L 138.7,424.4 L 182.0,438.5 L 193.8,446.6 L 200.1,460.7 L 224.4,470.7 L 229.2,478.8 L 227.6,482.8 L 241.0,488.8 L 241.7,502.9 L 249.6,507.0 L 341.6,509.0 L 350.3,513.0 L 355.0,519.0 L 332.2,549.2 L 351.0,555.3 L 359.7,563.3 L 381.7,466.7 L 372.3,444.6 L 357.3,434.5 L 358.1,412.4 L 391.9,408.3 L 385.6,396.3 L 365.2,394.3 L 473.7,392.2 L 475.3,386.2 L 464.3,354.0 L 441.5,337.9 L 460.3,321.8 L 447.8,309.7 L 439.1,285.6 L 439.9,261.4 L 447.8,255.4 L 447.8,247.4 L 455.6,239.3 L 454.8,233.3 L 444.6,229.2 L 373.1,227.2 L 356.5,209.1 L 339.2,205.1 L 281.1,203.1 L 277.9,195.0 L 267.7,191.0 L 268.5,178.9 L 273.2,172.9 L 271.6,164.8 L 260.6,154.8 L 255.1,138.7 L 237.8,132.6 L 248.8,118.6 L 252.8,96.4 L 266.9,76.3 L 275.6,74.3 L 285.0,60.2 L 306.2,54.2 L 318.0,46.1 L 314.1,36.0 L 303.1,32.0 Z"
+            fill="none"
+            stroke="rgba(252,209,22,0.55)"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"/>
+          <!-- Borde interior sutil -->
+          <path
+            d="M 295.2,32.0 L 280.3,38.1 L 274.8,50.1 L 241.0,66.2 L 204.8,68.2 L 201.6,74.3 L 178.8,76.3 L 154.5,92.4 L 147.4,106.5 L 152.1,110.5 L 147.4,120.6 L 152.1,124.6 L 150.5,128.6 L 132.4,132.6 L 124.6,144.7 L 112.0,152.8 L 83.7,154.8 L 81.3,160.8 L 91.6,176.9 L 85.3,183.0 L 71.1,185.0 L 66.4,201.1 L 74.3,207.1 L 73.5,213.1 L 86.1,221.2 L 81.3,233.3 L 90.0,247.4 L 78.2,255.4 L 84.5,257.4 L 87.6,281.6 L 86.1,289.6 L 79.0,295.7 L 85.3,305.7 L 93.1,309.7 L 92.3,313.8 L 73.5,333.9 L 54.6,335.9 L 72.7,337.9 L 65.6,344.0 L 48.3,346.0 L 35.7,360.0 L 40.4,370.1 L 30.2,372.1 L 23.9,378.2 L 48.3,396.3 L 82.1,410.4 L 85.3,418.4 L 138.7,424.4 L 182.0,438.5 L 193.8,446.6 L 200.1,460.7 L 224.4,470.7 L 229.2,478.8 L 227.6,482.8 L 241.0,488.8 L 241.7,502.9 L 249.6,507.0 L 341.6,509.0 L 350.3,513.0 L 355.0,519.0 L 332.2,549.2 L 351.0,555.3 L 359.7,563.3 L 381.7,466.7 L 372.3,444.6 L 357.3,434.5 L 358.1,412.4 L 391.9,408.3 L 385.6,396.3 L 365.2,394.3 L 473.7,392.2 L 475.3,386.2 L 464.3,354.0 L 441.5,337.9 L 460.3,321.8 L 447.8,309.7 L 439.1,285.6 L 439.9,261.4 L 447.8,255.4 L 447.8,247.4 L 455.6,239.3 L 454.8,233.3 L 444.6,229.2 L 373.1,227.2 L 356.5,209.1 L 339.2,205.1 L 281.1,203.1 L 277.9,195.0 L 267.7,191.0 L 268.5,178.9 L 273.2,172.9 L 271.6,164.8 L 260.6,154.8 L 255.1,138.7 L 237.8,132.6 L 248.8,118.6 L 252.8,96.4 L 266.9,76.3 L 275.6,74.3 L 285.0,60.2 L 306.2,54.2 L 318.0,46.1 L 314.1,36.0 L 303.1,32.0 Z"
+            fill="none"
+            stroke="rgba(255,255,255,0.08)"
+            stroke-width="4"
+            stroke-linejoin="round"/>
+
+          <!-- EJES CARTESIANOS -->
+          <line x1="250" y1="28" x2="250" y2="572" stroke="rgba(252,209,22,0.5)" stroke-width="1.2" stroke-dasharray="5,4"/>
+          <line x1="28"  y1="300" x2="472" y2="300" stroke="rgba(252,209,22,0.5)" stroke-width="1.2" stroke-dasharray="5,4"/>
+
+          <!-- Flechas ejes -->
+          <polygon points="250,18  244,33 256,33"  fill="rgba(252,209,22,0.8)"/>
+          <polygon points="250,582 244,567 256,567" fill="rgba(252,209,22,0.8)"/>
+          <polygon points="482,300 467,294 467,306" fill="rgba(252,209,22,0.8)"/>
+          <polygon points="18,300  33,294  33,306"  fill="rgba(252,209,22,0.8)"/>
+
+          <!-- Etiquetas ejes -->
+          <text x="250" y="13"  fill="rgba(252,209,22,0.9)" font-size="10" font-family="IBM Plex Mono" text-anchor="middle" font-weight="600">LIBERTARIO</text>
+          <text x="250" y="594" fill="rgba(252,209,22,0.9)" font-size="10" font-family="IBM Plex Mono" text-anchor="middle" font-weight="600">AUTORITARIO</text>
+          <text x="478" y="303" fill="rgba(252,209,22,0.9)" font-size="10" font-family="IBM Plex Mono" text-anchor="start"  font-weight="600">DERECHA</text>
+          <text x="22"  y="303" fill="rgba(252,209,22,0.9)" font-size="10" font-family="IBM Plex Mono" text-anchor="end"    font-weight="600">IZQUIERDA</text>
+
+          <!-- Cuadrantes fondo sutil -->
+          <rect x="30"  y="30"  width="218" height="268" fill="rgba(255,90,90,0.03)"  rx="4"/>
+          <rect x="252" y="30"  width="218" height="268" fill="rgba(74,140,255,0.03)" rx="4"/>
+          <rect x="30"  y="302" width="218" height="268" fill="rgba(255,90,90,0.02)"  rx="4"/>
+          <rect x="252" y="302" width="218" height="268" fill="rgba(74,140,255,0.02)" rx="4"/>
+
+          <!-- Etiquetas cuadrantes -->
+          <text x="110" y="168" fill="rgba(255,90,90,0.5)"  font-size="9" font-family="IBM Plex Mono" text-anchor="middle">IZQUIERDA</text>
+          <text x="110" y="180" fill="rgba(255,90,90,0.5)"  font-size="8" font-family="IBM Plex Mono" text-anchor="middle">Libertaria</text>
+          <text x="390" y="168" fill="rgba(74,140,255,0.5)" font-size="9" font-family="IBM Plex Mono" text-anchor="middle">DERECHA</text>
+          <text x="390" y="180" fill="rgba(74,140,255,0.5)" font-size="8" font-family="IBM Plex Mono" text-anchor="middle">Libertaria</text>
+          <text x="110" y="430" fill="rgba(255,90,90,0.35)"  font-size="9" font-family="IBM Plex Mono" text-anchor="middle">IZQUIERDA</text>
+          <text x="110" y="442" fill="rgba(255,90,90,0.35)"  font-size="8" font-family="IBM Plex Mono" text-anchor="middle">Autoritaria</text>
+          <text x="390" y="430" fill="rgba(74,140,255,0.35)" font-size="9" font-family="IBM Plex Mono" text-anchor="middle">DERECHA</text>
+          <text x="390" y="442" fill="rgba(74,140,255,0.35)" font-size="8" font-family="IBM Plex Mono" text-anchor="middle">Autoritaria</text>
+
+          <!-- Zona centro -->
+          <ellipse cx="250" cy="300" rx="45" ry="45" fill="rgba(252,209,22,0.04)" stroke="rgba(252,209,22,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="250" y="305" fill="rgba(252,209,22,0.5)" font-size="8" font-family="IBM Plex Mono" text-anchor="middle">CENTRO</text>
+
+          <!-- Puntos candidatos (inyectados por JS) -->
+          <g id="candidateDots"></g>
+
+          <!-- Punto usuario -->
+          <g id="userDot" transform="translate(250,300)">
+            <circle r="16" fill="rgba(252,209,22,0.2)" filter="url(#glow)"/>
+            <circle r="9"  fill="#FCD116" filter="url(#softGlow)"/>
+            <text y="25" fill="rgba(252,209,22,0.95)" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" font-weight="700">TÚ</text>
+          </g>
+          </svg>
+
+        <!-- Leyenda -->
+        <div class="map-legend">
+          <div class="legend-item"><span class="dot amarillo"></span> Tú</div>
+          <div class="legend-item"><span class="dot rojo"></span> Candidatos izquierda</div>
+          <div class="legend-item"><span class="dot azul"></span> Candidatos derecha</div>
+          <div class="legend-item"><span class="dot verde"></span> Candidatos centro</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFIL POR TEMA -->
+    <section class="score-breakdown">
+      <h3>Tu perfil por tema</h3>
+      <div class="score-bars" id="scoreBars"></div>
+    </section>
+
+    <!-- MATCH CON CANDIDATOS -->
+    <section class="candidates-section">
+      <h3>Compara con los candidatos</h3>
+      <p class="candidates-note">Selecciona un candidato de la lista oficial para ver tu afinidad en cada tema</p>
+
+      <div class="candidate-selector">
+        <label>Candidato presidencial (14 candidatos oficiales):</label>
+        <div class="custom-select" id="candidateSelect">
+          <div class="select-trigger" onclick="toggleCandidateDropdown()">
+            <span id="selectedCandidateName">Elige un candidato...</span>
+            <span class="select-arrow">▾</span>
+          </div>
+          <div class="select-dropdown" id="candidateDropdown"></div>
+        </div>
+      </div>
+
+      <!-- Panel match -->
+      <div class="match-panel" id="matchPanel" style="display:none">
+        <div class="match-header">
+          <div class="match-avatar" id="matchAvatar">A</div>
+          <div class="match-info">
+            <h4 id="matchName">Candidato</h4>
+            <div class="match-vp" id="matchVP">VP: —</div>
+            <span class="match-party" id="matchParty">Partido</span>
+          </div>
+          <div class="match-pct-big" id="matchPctBig">0%</div>
+        </div>
+        <div class="match-slogan" id="matchSlogan">"Slogan"</div>
+
+        <div id="matchBars"></div>
+
+        <div class="match-description" id="matchDescription"></div>
+
+        <div class="match-actions">
+          <button class="btn-download-plan" onclick="downloadPlan()">
+            📄 Descargar Plan de Gobierno
+          </button>
+          <button class="btn-download-img" onclick="downloadResult()">
+            🖼 Descargar mi resultado
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCIONES FINALES -->
+    <section class="final-actions">
+      <button class="btn-retry" onclick="window.location.href='quiz.html'">🔄 Volver a hacer el test</button>
+      <button class="btn-share" onclick="shareResult()">📲 Compartir en redes</button>
+    </section>
+
+  </main>
+
+  <script src="js/questions.js"></script>
+  <script src="js/candidates.js"></script>
+  <script src="js/results.js"></script>
+</body>
+</html>
